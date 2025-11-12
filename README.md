@@ -169,4 +169,4 @@ For issues: Open a GitHub issue with logs.
 
 ## License
 
-MIT License — free to use/modify. Main author: LeXuS-Azazello.
+GNU License — free to use/modify. Main author: LeXuS-Azazello.
