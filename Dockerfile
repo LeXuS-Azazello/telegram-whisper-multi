@@ -40,7 +40,7 @@ COPY --from=builder /app/package*.json ./
 RUN mkdir -p /app/models
 
 # Args for model config
-ARG MODEL_SIZE=base
+ARG MODEL_SIZE=$MODEL_SIZE
 ARG WHISPER_MODE=local
 ENV WHISPER_MODEL_SIZE=$MODEL_SIZE
 ENV WHISPER_MODE=$WHISPER_MODE
