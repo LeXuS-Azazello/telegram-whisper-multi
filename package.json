@@ -1,27 +1,44 @@
 {
   "name": "telegram-whisper-multi",
   "version": "1.0.0",
-  "description": "Telegram with multi Whisper transcription",
+  "description": "Multi-mode Telegram userbot for voice transcription (local Whisper, API, Deepgram)",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "dev": "ts-node src/index.ts",
-    "download": "chmod +x ./node_modules/whisper-node/lib/whisper.cpp/models/download-ggml-model.sh && ./node_modules/whisper-node/lib/whisper.cpp/models/download-ggml-model.sh base",
-    "download_start": "npm run download && npm run start"
+    "dev": "ts-node src/index.ts"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LeXuS-Azazello/telegram-whisper-multi.git"
+  },
+  "keywords": [
+    "telegram",
+    "userbot",
+    "whisper",
+    "transcription",
+    "voice-to-text"
+  ],
+  "author": "LeXuS-Azazello",
+  "license": "MIT",
   "dependencies": {
-    "dotenv": "^17.2.3",
-    "form-data": "^4.0.4",
+    "dotenv": "^16.4.5",
     "node-fetch": "^3.3.2",
+    "form-data": "^4.0.0",
     "shelljs": "^0.10.0",
     "telegram": "^2.26.22",
     "whisper-node": "^1.1.1"
   },
   "devDependencies": {
-    "@types/node": "^24.10.0",
+    "@types/node": "^22.7.4",
     "input": "^1.0.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "typescript": "^5.6.2"
+  },
+  "overrides": {
+    "core-js": "^3.38.1",
+    "glob": "^10.3.10",
+    "inflight": "npm:@isaacs/inflight@^1.0.7",
+    "ws": "^8.18.0"
   }
 }
