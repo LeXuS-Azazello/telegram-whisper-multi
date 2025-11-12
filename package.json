@@ -1,0 +1,27 @@
+{
+  "name": "telegram-whisper-multi",
+  "version": "1.0.0",
+  "description": "Telegram with multi Whisper transcription",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "download": "chmod +x ./node_modules/whisper-node/lib/whisper.cpp/models/download-ggml-model.sh && ./node_modules/whisper-node/lib/whisper.cpp/models/download-ggml-model.sh base",
+    "download_start": "npm run download && npm run start"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "form-data": "^4.0.4",
+    "node-fetch": "^3.3.2",
+    "shelljs": "^0.10.0",
+    "telegram": "^2.26.22",
+    "whisper-node": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "input": "^1.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

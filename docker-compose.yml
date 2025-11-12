@@ -1,0 +1,20 @@
+# docker-compose.yml for Telegram userbot
+# Run with: docker-compose up -d
+# Build with model: docker-compose build --build-arg MODEL_SIZE=base --build-arg WHISPER_MODE=local
+# Models will be persisted in ./models on host
+
+services:
+  userbot:
+    build:
+      context: .
+      args:
+        - MODEL_SIZE=${WHISPER_MODEL_SIZE:-base} # Pass model from .env or default 'base'
+        - WHISPER_MODE=${WHISPER_MODE:-local} # Pass mode to conditional download
+    container_name: telegram-userbot
+    restart: always
+    env_file:
+      - .env # Mount .env from host (keys: TG_API_ID, etc.)
+    volumes:
+      - ./models:/app/models # Persist models on host (downloaded once)
+      - ./logs:/app/logs # Optional: for custom logs if needed
+    # No ports: userbot polls Telegram, no incoming traffic

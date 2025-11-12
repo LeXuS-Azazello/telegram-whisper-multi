@@ -1,0 +1,24 @@
+# Ignore node_modules and build artifacts
+node_modules
+dist
+
+# Ignore env and secrets
+.env
+.env_EXAMPLE
+
+# Ignore temp files
+temp_voice_*.ogg
+temp_voice_*.wav
+
+# Ignore Git and OS
+.git
+.gitignore
+.DS_Store
+Thumbs.db
+
+# Ignore types and dev
+src/types
+*.d.ts
+
+# Ignore logs if any
+logs
