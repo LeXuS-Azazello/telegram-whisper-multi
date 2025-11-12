@@ -7,7 +7,7 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "ts-node src/index.ts",
-    "download": "chmod +x ./node_modules/whisper-node/lib/whisper.cpp/models/download-ggml-model.sh && ./node_modules/whisper-node/lib/whisper.cpp/models/download-ggml-model.sh small",
+    "download": "chmod +x ./node_modules/whisper-node/lib/whisper.cpp/models/download-ggml-model.sh && ./node_modules/whisper-node/lib/whisper.cpp/models/download-ggml-model.sh medium",
     "download_start": "npm run download && npm run start"
   },
   "dependencies": {
